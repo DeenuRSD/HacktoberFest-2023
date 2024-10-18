@@ -6,6 +6,12 @@ struct TreeNode {
     TreeNode* left;
     TreeNode* right;
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    
+    // Destructor to clean up left and right subtrees
+    ~TreeNode() {
+        delete left;
+        delete right;
+    }
 };
 
 void preOrderTraversal(TreeNode* root) {
@@ -36,7 +42,8 @@ int main() {
     preOrderTraversal(root);
     std::cout << std::endl;
 
-    // Clean up memory (not shown in the code)
+    // Clean up memory
+    delete root;
 
     return 0;
 }
