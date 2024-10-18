@@ -7,15 +7,13 @@ class PalindromeChecker {
         System.out.println("Enter a string:");
         String s = sc.nextLine();
         
-        for(int i=0; i<s.length()/2; i++)
-        {
-            if(s.charAt(i)!=s.charAt(s.length()-i-1))
-            {
-                System.out.println('"'+s+'"'+" is not a palindrome string.");
+        for(int i = 0; i < s.length() / 2; i++) {
+            if(s.charAt(i) != s.charAt(s.length() - i - 1)) {
+                System.out.println("\"" + s + "\"" + " is not a palindrome string.");
                 return;
             }
         }
         
-        System.out.println('"'+s+'"'+" is a palindrome string.");
+        System.out.println("\"" + s + "\"" + " is a palindrome string.");
     }
 }
